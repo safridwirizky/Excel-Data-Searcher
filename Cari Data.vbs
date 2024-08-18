@@ -38,7 +38,7 @@ destinationSheet.Name = "Search Results"
 ' Loop through each file in the folder
 For Each file In files
 	' Check if the file is an Excel file and does not start with ~$
-    If (LCase(fso.GetExtensionName(file)) = "xls" Or LCase(fso.GetExtensionName(file)) = "xlsx") And Left(File.Name, 2) <> "~$" Then
+    If (LCase(fso.GetExtensionName(file)) = "xls" Or LCase(fso.GetExtensionName(file)) = "xlsx") And Left(file.Name, 2) <> "~$" Then
 		' Open the Excel workbook
         Set sourceWorkbook = excelApp.Workbooks.Open(file.Path)
 		
